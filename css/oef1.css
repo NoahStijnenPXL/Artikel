@@ -1,1 +1,187 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
 
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    padding: 10px;
+
+}
+
+header span {
+    height: 224px;
+    border-radius: 20px;
+    font-size: 150px;
+    align-items: center;
+    border: 5px solid black;
+    background-color: lightgrey;
+
+}
+
+header img {
+    border-radius: 20px;
+    border: 5px solid gray;
+}
+
+header h1 {
+    align-self: center;
+    font-size: 50px;
+}
+
+nav {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 10px solid gray;
+    padding: 10px 0;
+
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    margin: 10px;
+    margin-top: 0;
+    padding: 5px 10px;
+    border: 3px solid gray;
+    border-radius: 10px;
+    transition: background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: lightgray;
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.games {
+    display: flex;
+    gap: 50px;
+}
+
+.games article {
+    flex: 1;
+}
+
+
+article figure {
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+article figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid gray;
+}
+
+.stars {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer {
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+
+    body {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    nav a {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .games {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .games article {
+        flex: 0 0 calc(50% - 10px);
+        min-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+
+    header,
+    footer {
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+
+
+    .games {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .games article {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    article figure {
+        margin: 0;
+    }
+
+    article p {
+        flex: 1;
+        margin: 0;
+    }
+
+    article figure img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
